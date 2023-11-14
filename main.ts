@@ -17,7 +17,7 @@ IR.IR_callbackUser(function (message) {
     if (message == 8) {
         maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 0)
         maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 150)
-        // maqueen.writeLED(maqueen.LED.LEDLeft, maqueen.LEDswitch.turnOn)
+        maqueen.writeLED(maqueen.LED.LEDLeft, maqueen.LEDswitch.turnOn)
         maqueen.writeLED(maqueen.LED.LEDRight, maqueen.LEDswitch.turnOff)
     }
     // rechts
@@ -27,6 +27,7 @@ IR.IR_callbackUser(function (message) {
         maqueen.writeLED(maqueen.LED.LEDLeft, maqueen.LEDswitch.turnOff)
         maqueen.writeLED(maqueen.LED.LEDRight, maqueen.LEDswitch.turnOn)
     }
+    // stop
     if (message == 28) {
         maqueen.motorStop(maqueen.Motors.All)
         maqueen.writeLED(maqueen.LED.LEDLeft, maqueen.LEDswitch.turnOff)
